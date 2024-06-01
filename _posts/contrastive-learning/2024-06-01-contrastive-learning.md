@@ -93,14 +93,14 @@ Here's a curated list of papers on contrastive learning:
 
 **[Barlow Twins: Self-Supervised Learning via Redundancy Reduction](https://arxiv.org/abs/2103.03230)**  
    Authors: Jure Zbontar, Li Jing, Ishan Misra, Yann LeCun, Stéphane Deny
-   Venue: arXiv preprint 2021  
+   Venue: arXiv preprint  
 
 **[CLIP: Contrastive Language-Image Pre-training](https://arxiv.org/abs/2103.00020)**  
    Authors: Alec Radford, Jong Wook Kim, Chris Hallacy, Aditya Ramesh, Gabriel Goh, Sandhini Agarwal, Girish Sastry, Amanda Askell, Pamela Mishkin, Jack Clark, Gretchen Krueger, Ilya Sutskever
-   Conference: NeurIPS 2021  
+   Venue: NeurIPS 2021  
 
 **[SimCSE: Simple Contrastive Learning of Sentence Embeddings](https://arxiv.org/abs/2104.08821)**  
    Authors: Tianyu Gao, Xingcheng Yao, Danqi Chen  
-   Conference: arXiv preprint 2021  
+   Venue: arXiv preprint  
 
 <!-- # Some further thoughts <a name="some-further-thoughts"></a> -->
