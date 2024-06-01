@@ -1,0 +1,95 @@
+---
+---
+
+@import "main";
+
+.wrapper {
+  max-width: 800px; /* Adjust the width as needed */
+  margin: 0 auto; /* Center the wrapper */
+  padding: 0 20px; /* Add padding for better spacing */
+}
+
+.page-content {
+  padding: 20px; /* Add padding to the content */
+}
+  
+.publication-item h2 {
+  font-size: 24px; 
+  color: #b28951;
+}
+
+.publication-venue, .publication-year {
+  font-size: 0.9em;
+  font-weight: normal;
+}
+
+/* Ensure h3 headings have the same style */
+h3.publications-item-note,
+h3.posts-item-note {
+  font-size: 1.5em; /* Adjust the size as needed */
+  font-weight: bold;
+}
+
+/* Ensure h4 titles have the same style */
+h4.publication-item-title,
+h4.post-item-title {
+  font-size: 1.25em; /* Adjust the size as needed */
+  font-weight: normal;
+  margin: 0.5em 0; /* Adjust spacing as needed */
+}
+
+/* Add specific styles for publication and post items if needed */
+.publication-item, .post-item {
+  margin-bottom: 1em; /* Adjust spacing as needed */
+}
+
+/* Ensure links within the titles have the same style */
+.publication-item-title a,
+.post-item-title a {
+  color: inherit; /* Adjust color as needed */
+  text-decoration: none; /* Adjust decoration as needed */
+  font-size: 16px; 
+}
+
+.publication-item-title a:hover,
+.post-item-title a:hover {
+  text-decoration: underline; /* Adjust hover effect as needed */
+}
+
+
+
+/* Ensure all h3 headings have the same style */
+h3.publications-item-note,
+h3.posts-item-note,
+h3.academic-activities-item-note,
+h3.teaching-item-note,
+h3.honours-awards-item-note {
+  font-size: 1.5em; /* Adjust the size as needed */
+  font-weight: bold;
+  margin-top: 1.5em; /* Adjust spacing as needed */
+}
+
+/* Ensure ul and li elements have consistent styles */
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul li {
+  margin-bottom: 0.5em;
+}
+
+ul ul {
+  margin-left: 1em;
+}
+
+ul ul li {
+  margin-bottom: 0.25em;
+}
+
+/* Adjust margin for the page */
+body {
+  margin: 0 15px; /* Adjust margins for the page as needed */
+}
+

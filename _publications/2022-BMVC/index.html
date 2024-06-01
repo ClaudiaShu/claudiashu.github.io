@@ -1,0 +1,296 @@
+---
+layout: page
+title: "Revisiting Self-Supervised Contrastive Learning for Facial Expression Recognition"
+date: 2022-10-07
+permalink: /publications/2022-BMVC/
+venue: "BMVC"
+year: 2022
+---
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+
+
+<title>Shu: SSLFER</title>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
+
+<style media="all">
+IMG {
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+    Float: center;
+	PADDING-BOTTOM: 0px;
+	PADDING-TOP: 0px;
+    WIDTH: 100%;
+}
+#primarycontent {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    max-width: 700px;
+    width: 600px;
+    width: calc(100vw - 300px); /* Adjust 300px according to your needs */
+}
+
+
+BODY {
+	TEXT-ALIGN: center
+}
+</style>
+<style >
+body {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+  word-wrap: break-word;
+  shape-margin: 0; /* Removed this line as it seems incomplete */
+  text-align: justify;
+}
+
+.link {
+  font-weight: bold;
+  font-family: Georgia, "New Century Schoolbook", Times, serif;
+  color: #55AAFF;
+  display: inline-block;
+}
+
+.footnote{
+  font-family: Georgia, "New Century Schoolbook", Times, serif;
+  color: #686868;
+  text-align: right;
+  font-size: 12px;
+  display: inline-block;
+}
+
+.strong{
+  font-weight: bold;
+  display: inline;
+}
+
+.green{
+  color: #00FF00;
+  display: inline;
+}
+
+h1 {
+  font-family: Georgia, "New Century Schoolbook", Times, serif;
+  font-weight: normal;
+  font-size: 30px;
+}
+
+h2 {
+  font-family: Georgia, "New Century Schoolbook", Times, serif;
+  font-weight: normal;
+  font-size: 20px;
+  display: block;
+  
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+a {
+  font-weight: bold;
+  font-family: Georgia, "New Century Schoolbook", Times, serif;
+  color: #b28951;
+}
+strong a {
+  font-family: Georgia, "New Century Schoolbook", Times, serif;
+  color: #b28951;
+}
+
+.title-small {
+  font-size: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: bold;
+  color: #F90;
+}
+.title-large {
+  font-size: 28px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: bold;
+  color: #000;
+}
+.margin {
+  font-size: 10px;
+  line-height: 10px;
+}
+.margin-small {
+  font-size: 5px;
+  line-height: 5px;
+}
+.margin-large {
+  font-size: 16px;
+  line-height: 16px;
+}
+a:link {
+  text-decoration: none;
+  color: #b28951;
+}
+a:visited {
+  text-decoration: none;
+  color: #b28951;
+}
+content a:link {
+  text-decoration: none;
+}
+content a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:active {
+  text-decoration: underline;
+  
+}
+strong a:active {
+  text-decoration: underline;
+  color: #000000;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
+
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="primarycontent">
+<!-- <center><h1 >Revisiting Self-Supervised Contrastive Learning for Facial Expression Recognition</p></h1></center> -->
+<center><h4><a class=link href="https://claudiashu.github.io/">Yuxuan Shu</a>&nbsp;&nbsp;&nbsp;<a class=link href="https://xiaogu.site/">Xiao Gu</a>&nbsp;&nbsp;&nbsp;<a class=link href="https://imr.sjtu.edu.cn/en/ab_lead/210.html">Guang-Zhong Yang</a>&nbsp;&nbsp;&nbsp;<a class=link href="https://www.bennyplo.com">Benny Lo</a></h4></center>
+
+<center><h3><strong>BMVC 2022</strong></h3></center>
+	
+<center><h3><strong><a href="https://github.com/ClaudiaShu/SSL-FER"> Code </a>|<a href="https://bmvc2022.mpi-inf.mpg.de/406/"> Paper </a></strong></h3></center> 
+
+<!-- <center><h3><strong><a href="
+http://arxiv.org/pdf/2207.10150.pdf">Paper</a> | <a href="https://github.com/guxiao0822/lt-ds">Code</a>
+| <a href="https://github.com/guxiao0822/LT-DS/tree/main/dataset">Dataset</a></strong></h3></center>  -->
+
+<center><img src="misc/Picture1.png" style="display:inline-block; width:100%"><br></center>
+
+<!--Abstract-->
+<div class="container" style="padding-top: 20px;">
+<h2><strong>Abstract</strong></h2>
+<p style='text-align: justify; '>
+The success of most advanced facial expression recognition works relies heavily on large-scale annotated datasets. However, it poses great challenges in acquiring clean and consistent annotations for facial expression datasets. On the other hand, self-supervised contrastive learning has gained great popularity due to its simple yet effective instance discrimination training strategy, which can potentially circumvent the annotation issue. However, there remain inherent disadvantages of instance-level discrimination, which are even more challenging when faced with complicated facial representations. In this paper, we revisit the use of self-supervised contrastive learning and explore three core strategies to enforce expression-specific representations and to minimize the interference from other facial attributes, such as identity and face styling. Experimental results show that our proposed method outperforms the current state-of-the-art self-supervised learning methods, in terms of both categorical and dimensional facial expression recognition tasks.</p>
+</div>
+	
+<!--Videos-->
+<div class="container" style="padding-top: 20px;">
+  <div class="row" style="justify-content: center; align-items: flex-end; text-align: center; padding-top: 5px; padding-bottom: 5px;">
+  <div class="column">
+  <h2><strong>Video</strong></h2>
+  </div>
+    <div class="column">
+  <h2><strong>Poster</strong></h2>
+    </div></div>
+  <div class="row" style="justify-content: center; align-items: flex-end; text-align: right; padding-top: 5px; padding-bottom: 5px;padding-right: 30px;">
+    <div class="column">
+    <video style="width: 500px" controls>
+      <source src="misc/0406_video.mp4" type=video/mp4>
+    </video>
+  </div>
+    <div class="column">
+      <a href="misc/0406_poster.pdf"><img src="misc/0406_poster.png" alt='poster' style="width: 250px"></img></a>
+  </div>
+</div>
+</div>
+	
+<!--Highlights-->
+<div class="container" style="padding-top: 20px;">
+
+<h2><strong>Highlights</strong></h2><hr>
+<p style='text-align: justify; '>
+We explored three main promising solutions in <strong>Self-supervised learning-based Facial Expression Recognition (FER).</strong></p> 
+
+<h3><strong> &#183;Positives with Same Expression</strong></h3>
+	<center><img src="misc/stra1.jpg" style="display:inline-block; width:100%"><br></center> 
+	<p><p class=green> &#10004;</p> <strong>TimeAug</strong> - Add additional temporal shifts to generate positive pairs.
+	<p><p class=green> &#10004;</p> <strong>FaceSwap</strong> - Swap faces to get same expression on different faces with a low computational cost.
+	
+<h3><strong> &#183;Negatives with Same Identity</strong></h3>
+	<center><img src="misc/stra2.jpg" style="display:inline-block; width:100%"><br></center> 
+	<p><p class=green> &#10004;</p> <strong>HardNeg</strong> - Sample with a larger time-interval to avoid identity-related shortcuts.
+	
+<h3><strong> &#183;False Negatives Cancellation</strong></h3>
+	<center><img src="misc/stra3.jpg" style="display:inline-block; width:100%"><br></center> 
+	<p><p class=green> &#10004;</p> <strong>MaskFN</strong> - Minimize the negative effects caused by false negatives using mouth-eye descriptors.
+</div>
+	
+
+	
+<!--Datasets-->
+<div class="container" style="padding-top: 20px;">
+<h2><strong>Datasets</strong></h2>
+	
+	We pretrained on <a href="https://mm.kaist.ac.kr/datasets/voxceleb/">VoxCeleb1</a> dataset and evaluated on two Facial eExpression Recognition datasets, <a href="http://mohammadmahoor.com/affectnet/">AffectNet</a> and <a href="https://www.kaggle.com/datasets/msambare/fer2013">FER2013</a>. We further evaluated on a Face Recognition dataset, <a href="http://vis-www.cs.umass.edu/lfw/">LFW</a>. In our experiment, we used the released version provided by scikit-learn. The usage can be found <a href="https://scikit-learn.org/0.19/datasets/labeled_faces.html">here</a>.
+	
+<!-- <p><p class=green> &#187;</p> <strong>VoxCeleb1</strong>
+	VoxCeleb1 is a large-scale dataset that contains videos with subjects spanning a wide range of different ethnicities, accents, professions and ages. It can be used for a number of applications including: Emotion recognition, Speaker identification, and Face generation etc.
+	Details of the dataset can be found <a href="https://mm.kaist.ac.kr/datasets/voxceleb/">here</a>.
+	
+<p><p class=green> &#187;</p> <strong>AffectNet</strong>
+	AffectNet is a database of facial expressions in the wild that contains more than 1M facial images. It enables research in automated facial expression recognition in two streams: Emotion classification and Valence & Arousal recognition.
+	Details of the dataset can be found <a href="http://mohammadmahoor.com/affectnet/">here</a>. 
+	
+<p><p class=green> &#187;</p> <strong>FER2013</strong>
+	FER2013 is a widly known database for facial expression recognition.
+	Details of the dataset can be found <a href="https://www.kaggle.com/datasets/msambare/fer2013">here</a>. 
+	
+<p><p class=green> &#187;</p> <strong>LFW</strong>
+	LFW is a collection of JPEG pictures of famous people collected over the internet desgned for Face Recognition (or Face Identification).
+	Details of the dataset can be found <a href="http://vis-www.cs.umass.edu/lfw/">here</a>. 
+	We used the released version provided by scikit-learn. The usage can be found <a href="https://scikit-learn.org/0.19/datasets/labeled_faces.html">here</a>.  -->
+	
+</div>
+
+<!-- citation -->
+<div class="container" style="padding-top: 20px;">
+    <h2 id="citation" style="padding-top: 80px; margin-top: -80px;"><strong>Citation</strong></h2><hr>
+    <pre style="padding: 1.5rem; margin-right: 0; margin-left: 0; background: gainsboro; font-size:12px">
+@inproceedings{shu2022revisiting,
+  title={Revisiting Self-Supervised Contrastive Learning for Facial Expression Recognition},
+  author={Shu, Yuxuan and Gu, Xiao and Yang, Guang-Zhong and Lo, Benny},
+  booktitle={BMVC},
+  year={2022}
+}</pre>
+
+</div>
+	
+
+<!-- Footer -->
+<!-- <div class="container" style="padding-top: 50px;">
+    <center>
+      <footer>
+        <p>© Yuxuan Shu 2022</p>
+      </footer>
+    </center>
+</div> -->
+
+
+</body></html>

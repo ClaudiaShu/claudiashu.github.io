@@ -1,0 +1,59 @@
+---
+layout: default
+home: true
+---
+
+<h3 class="publications-item-note" aria-label="Recent Publications">Recent Publications</h3>
+{%- for publication in site.publications limit: site.number_of_publications -%}
+<article class="publication-item">
+  <!-- <span class="publication-item-date">{{ publication.date | date: "%b %d, %Y" }}</span> -->
+  
+  <h4 class="publication-item-title">
+    <a href="{{ publication.url }}">{{ publication.title | escape }}</a>
+    {% if publication.venue %}<span class="publication-venue">{{ publication.venue }}</span>{% endif %}
+    {% if publication.year %}<span class="publication-year">{{ publication.year }}</span>{% endif %}
+  </h4>
+</article>
+{%- endfor -%}
+
+<h3 class="posts-item-note" aria-label="Recent Posts">Recent Posts</h3>
+{%- for post in site.posts limit: site.number_of_posts -%}
+<article class="post-item">
+  <span class="post-item-date">{{ post.date | date: "%b %d, %Y" }}</span>
+  <h4 class="post-item-title">
+    <a href="{{ post.url }}">{{ post.title | escape }}</a>
+  </h4>
+</article>
+{%- endfor -%}
+
+
+<h3 class="academic-activities-item-note" aria-label="Academic Activities">Academic Activities</h3>
+<ul>
+  <li><strong>Reviewers</strong>
+    <ul>
+      <li>Conference: ACL 2023; EMNLP 2023</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 class="teaching-item-note" aria-label="Teaching">Teaching</h3>
+<ul>
+  <li>COMP0084: Information Retrieval and Data Mining (23/24)</li>
+  <li>COMP0087: Statistical Natural Language Processing (23/24)</li>
+</ul>
+
+<h3 class="honours-awards-item-note" aria-label="Honours and Awards">Honours and Awards</h3>
+<ul>
+  <li><strong>Honours</strong>
+    <ul>
+      <li>2022 Hamlyn Prize for Medical Robotics and Image Guided Intervention, Imperial College London.</li>
+      <li>2021 Honours Student Award in Remote Sensing Science and Technology, Wuhan University.</li>
+    </ul>
+  </li>
+  <li><strong>Scholarship</strong>
+    <ul>
+      <li>2022-2026 UCL Computer Science Departmental Funds for international PhD Studentship.</li>
+      <li>2017-2018 Hi‑Target Navigation Technology Scholarship.</li>
+    </ul>
+  </li>
+</ul>
