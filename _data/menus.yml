@@ -2,12 +2,12 @@
   url: /
   external: false
 
-- title: posts
-  url: /posts/
-  external: false
-
 - title: publications
   url: /publications/
+  external: false
+
+- title: posts
+  url: /posts/
   external: false
 
 - title: contact
