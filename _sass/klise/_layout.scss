@@ -190,8 +190,8 @@
   }
 
   .author-avatar {
-    width: 70px;
-    height: 70px;
+    width: 150px;
+    height: 150px;
     border-radius: 100%;
     user-select: none;
     background-color: $black;
@@ -230,9 +230,9 @@
   padding-bottom: 6px;
   @extend %clearfix;
 
-  &:not(:first-child) {
-    border-top: 1px solid $light;
-  }
+  // &:not(:first-child) {
+  //   border-top: 1px solid $light;
+  // }
 
   .post-item-date {
     min-width: 96px;
@@ -262,6 +262,52 @@
       }
     }
   }
+}
+
+// List of publications
+.publication-item {
+  display: flex;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  @extend %clearfix;
+
+  // &:not(:first-child) {
+  //   border-top: 1px solid $light;
+  // }
+
+  .publication-item-date {
+    min-width: 96px;
+    color: $black;
+    font-weight: 700;
+    padding-right: 10px;
+
+    @include media-query($on-mobile) {
+      font-size: 16px;
+    }
+  }
+
+  .publication-item-title {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-size: $base-font-size;
+    font-weight: normal;
+    letter-spacing: 0.1px;
+
+    a {
+      color: $text-base-color;
+
+      &:hover,
+      &:focus {
+        color: $black;
+      }
+    }
+  }
+}
+
+// citation
+.container pre {
+  background-color: gainsboro;
 }
 
 // Footer

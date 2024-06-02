@@ -4,10 +4,9 @@ home: true
 ---
 
 <h3 class="publications-item-note" aria-label="Recent Publications">Recent Publications</h3>
-{%- for publication in site.publications limit: site.number_of_publications -%}
+{%- assign sorted_publications = site.publications | sort: 'date' | reverse -%}
+{%- for publication in sorted_publications limit: site.number_of_publications -%}
 <article class="publication-item">
-  <!-- <span class="publication-item-date">{{ publication.date | date: "%b %d, %Y" }}</span> -->
-  
   <h4 class="publication-item-title">
     <a href="{{ publication.url }}">{{ publication.title | escape }}</a>
     {% if publication.venue %}<span class="publication-venue">{{ publication.venue }}</span>{% endif %}

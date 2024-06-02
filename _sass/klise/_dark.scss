@@ -205,6 +205,33 @@ body[data-theme="dark"] {
     }
   }
 
+  // Publication Item
+  .publication-item {
+    // &:not(:first-child) {
+    //   border-color: $dark-light;
+    // }
+
+    .publication-item-date {
+      color: $dark-white;
+    }
+
+    .publication-item-title {
+      a {
+        color: $dark-text-base-color;
+
+        &:hover,
+        &:focus {
+          color: $dark-white;
+        }
+      }
+    }
+  }
+
+  // citation
+  .container pre {
+    background-color: $dark-light;
+  }
+
   // Footer
   .footer {
     span.footer_item {
