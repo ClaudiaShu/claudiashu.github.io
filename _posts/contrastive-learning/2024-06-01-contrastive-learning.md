@@ -3,7 +3,7 @@ layout: post
 title: "A quick guide to Contrastive Learning"
 date: 2024-06-01
 categories: tutorials
-permalink: /posts/2024-06-01-contrastive-learning/
+permalink: /posts/contrastive-learning/
 usemathjax: true
 ---
 

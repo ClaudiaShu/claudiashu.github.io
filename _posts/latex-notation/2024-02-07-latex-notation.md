@@ -3,7 +3,7 @@ layout: post
 title: "How to properly code latex notations"
 date: 2024-02-07
 categories: tutorials
-permalink: /posts/2024-02-07-latex-notations/
+permalink: /posts/latex-notations/
 usemathjax: true
 ---
 
