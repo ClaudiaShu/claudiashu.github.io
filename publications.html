@@ -15,7 +15,10 @@ comments: false
 
 <ul id="search-results"></ul> -->
 
-{%- for publication in site.publications -%}
+{%- assign sorted_publications = site.publications | sort: "date" | reverse -%}
+
+{%- assign previous_year = '' -%}
+{%- for publication in sorted_publications -%}
   {%- capture current_year -%}{{ publication.date | date: "%Y" }}{%- endcapture -%}
   {%- unless current_year == previous_year -%}
     <h2>{{ current_year }}</h2>
@@ -27,3 +30,4 @@ comments: false
     </h3> 
   </article>
 {%- endfor -%}
+
