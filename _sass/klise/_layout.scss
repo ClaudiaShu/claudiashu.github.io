@@ -347,6 +347,12 @@
   }
 }
 
+.footer-icons {
+  display: flex;
+  justify-content: center; /* Center the icons horizontally */
+  gap: 20px; /* Adjust the gap between icons */
+}
+
 .not-found {
   text-align: center;
   display: flex;

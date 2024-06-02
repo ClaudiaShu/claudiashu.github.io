@@ -13,6 +13,11 @@ If you have a question or desire to cooperate, just send an email to me.
 
 **may u needs ✨**
 
-- <i class="fas fa-envelope"></i> [Email](mailto:{{ site.author.email }})
-- <i class="fab fa-github"></i> [Github](https://github.com/{{ site.author.github }})
-- <i class="fas fa-graduation-cap"></i> [Google Scholar](https://scholar.google.com/citations?user=6ucM9woAAAAJ&hl=en&oi=ao)
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<i class="fas fa-envelope"></i> [ Email me ](mailto:{{ site.author.email }})
+
+
+<!-- - <i class="fas fa-envelope"></i> [Email](mailto:{{ site.author.email }}) -->
+<!-- - <i class="fab fa-github"></i> [Github](https://github.com/{{ site.author.github }})
+- <i class="fas fa-graduation-cap"></i> [Google Scholar](https://scholar.google.com/citations?user=6ucM9woAAAAJ&hl=en&oi=ao) -->

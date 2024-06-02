@@ -15,8 +15,10 @@ author:
     Stay curious, stay inspired. 
   username: username # general username
   github: ClaudiaShu # github username
+  linkedin: https://www.linkedin.com/in/your-profile # linkedin profile
+  scholar: https://scholar.google.com/citations?user=6ucM9woAAAAJ&hl=en&oi=ao
   twitter: yuxuan_shu # twitter username
-  email: yuxuan.shu.22@ucl.ac.uk # email adress
+  email: yuxuan.shu.22@ucl.ac.uk # email address
   avatar: /assets/img/profile_photo.png # change with your own avatar
 
 # URL settings
