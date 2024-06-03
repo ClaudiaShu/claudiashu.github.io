@@ -9,8 +9,15 @@ home: true
 <article class="publication-item">
   <h4 class="publication-item-title">
     <a href="{{ publication.url }}">{{ publication.title | escape }}</a>
-    [ {% if publication.venue %}<span class="publication-venue">{{ publication.venue }}</span>{% endif %}
-    {% if publication.year %}<span class="publication-year">{{ publication.year }}</span>{% endif %} ]
+    <br> <!-- start new line here -->
+    <i class="fa-solid fa-hand-point-right"></i> &nbsp;&nbsp; {% if publication.venue %}<span class="publication-venue">{{ publication.venue }}</span>{% endif %}
+    {% if publication.year %}<span class="publication-year">{{ publication.year }}</span>{% endif %} &nbsp;&nbsp;
+    {% if publication.code_url %}
+      <a href="{{ publication.code_url }}" class="button" style="background-color: #2ebda1; color: white; text-decoration: none; border-radius: 4px; padding: 3px 8px; font-size: 14px; display: inline-block; width: 40px; height: 15px; line-height: 15px; text-align: center;">Code</a>
+    {% endif %}
+    {% if publication.paper_url %}
+      <a href="{{ publication.paper_url }}" class="button" style="background-color: #4693d7; color: white; text-decoration: none; border-radius: 4px; padding: 3px 8px; font-size: 14px; display: inline-block; width: 40px; height: 15px; line-height: 15px; text-align: center;">Paper</a>
+    {% endif %}
   </h4>
 </article>
 {%- endfor -%}

@@ -268,7 +268,7 @@
 .publication-item {
   display: flex;
   padding-top: 5px;
-  padding-bottom: 6px;
+  padding-bottom: 15px;
   @extend %clearfix;
 
   // &:not(:first-child) {

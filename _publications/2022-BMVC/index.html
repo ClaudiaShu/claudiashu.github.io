@@ -7,7 +7,7 @@ venue: "BMVC"
 year: 2022
 paper_url: "https://bmvc2022.mpi-inf.mpg.de/406/"
 code_url: "https://github.com/ClaudiaShu/SSL-FER"
-<!-- next: /publications/2024-arXiv-UNA/index.html -->
+abbrev: "SSLFER"
 ---
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
@@ -59,21 +59,6 @@ p {
   text-align: justify;
 }
 
-.link {
-  font-weight: bold;
-  font-family: Georgia, "New Century Schoolbook", Times, serif;
-  color: #55AAFF;
-  display: inline-block;
-}
-
-.footnote{
-  font-family: Georgia, "New Century Schoolbook", Times, serif;
-  color: #686868;
-  text-align: right;
-  font-size: 12px;
-  display: inline-block;
-}
-
 .strong{
   font-weight: bold;
   display: inline;
@@ -84,46 +69,6 @@ p {
   display: inline;
 }
 
-h1 {
-  font-family: Georgia, "New Century Schoolbook", Times, serif;
-  font-weight: normal;
-  font-size: 30px;
-}
-
-h2 {
-  font-family: Georgia, "New Century Schoolbook", Times, serif;
-  font-weight: normal;
-  font-size: 20px;
-  display: block;
-  
-  margin-block-start: 0.83em;
-  margin-block-end: 0.83em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-}
-
-a {
-  font-weight: bold;
-  font-family: Georgia, "New Century Schoolbook", Times, serif;
-  /* color: #b28951; */
-}
-strong a {
-  font-family: Georgia, "New Century Schoolbook", Times, serif;
-  /* color: #b28951; */
-}
-
-.title-small {
-  font-size: 20px;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-weight: bold;
-  color: #F90;
-}
-.title-large {
-  font-size: 28px;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-weight: bold;
-  color: #000;
-}
 .margin {
   font-size: 10px;
   line-height: 10px;
@@ -136,14 +81,7 @@ strong a {
   font-size: 16px;
   line-height: 16px;
 }
-/* a:link {
-  text-decoration: none;
-  color: #b28951;
-}
-a:visited {
-  text-decoration: none;
-  color: #b28951;
-} */
+
 content a:link {
   text-decoration: none;
 }
@@ -184,15 +122,11 @@ pre {
 
 <div id="primarycontent">
 <!-- <center><h1 >Revisiting Self-Supervised Contrastive Learning for Facial Expression Recognition</p></h1></center> -->
-<center><h4><a class=link href="https://claudiashu.github.io/">Yuxuan Shu</a>&nbsp;&nbsp;&nbsp;<a class=link href="https://xiaogu.site/">Xiao Gu</a>&nbsp;&nbsp;&nbsp;<a class=link href="https://imr.sjtu.edu.cn/en/ab_lead/210.html">Guang-Zhong Yang</a>&nbsp;&nbsp;&nbsp;<a class=link href="https://www.bennyplo.com">Benny Lo</a></h4></center>
+<center><h3><a class=link href="https://claudiashu.github.io/">Yuxuan Shu</a>&nbsp;&nbsp;&nbsp;<a class=link href="https://xiaogu.site/">Xiao Gu</a>&nbsp;&nbsp;&nbsp;<a class=link href="https://imr.sjtu.edu.cn/en/ab_lead/210.html">Guang-Zhong Yang</a>&nbsp;&nbsp;&nbsp;<a class=link href="https://www.bennyplo.com">Benny Lo</a></h3></center>
 
-<center><h3><strong>BMVC 2022</strong></h3></center>
+<center><h4><strong>{{ page.venue }} {{ page.year }}</strong></h4></center>
 	
-<center><h3><strong><a href="https://github.com/ClaudiaShu/SSL-FER"> Code </a>|<a href="https://bmvc2022.mpi-inf.mpg.de/406/"> Paper </a></strong></h3></center> 
-
-<!-- <center><h3><strong><a href="
-http://arxiv.org/pdf/2207.10150.pdf">Paper</a> | <a href="https://github.com/guxiao0822/lt-ds">Code</a>
-| <a href="https://github.com/guxiao0822/LT-DS/tree/main/dataset">Dataset</a></strong></h3></center>  -->
+<center><h4><strong><a href="{{ page.code_url }}"> Code </a>|<a href="{{ page.paper_url }}"> Paper </a></strong></h4></center> 
 
 <center><img src="misc/Picture1.png" style="display:inline-block; width:100%"><br></center>
 
@@ -245,7 +179,6 @@ We explored three main promising solutions in <strong>Self-supervised learning-b
 	<p><p class=green> &#10004;</p> <strong>MaskFN</strong> - Minimize the negative effects caused by false negatives using mouth-eye descriptors.
 </div>
 	
-
 	
 <!--Datasets-->
 <div class="container" style="padding-top: 20px;">
@@ -287,13 +220,13 @@ We explored three main promising solutions in <strong>Self-supervised learning-b
 	
 
 <!-- Footer -->
-<!-- <div class="container" style="padding-top: 50px;">
-    <center>
-      <footer>
-        <p>© Yuxuan Shu 2022</p>
-      </footer>
-    </center>
-</div> -->
+<div class="container" style="padding-top: 50px;">
+  <center>
+    <footer>
+      <p>© Yuxuan Shu {{ page.year }}</p>
+    </footer>
+  </center>
+</div>
 
 
 </body></html>
