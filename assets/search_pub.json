@@ -1,0 +1,17 @@
+---
+layout: none
+---
+
+[
+  {% for publication in site.publications %}
+    {
+      "title"    : "{{ publication.title | escape }}",
+      "description" : "{{ publication.description | escape }}",
+      "tags"     : "{{ publication.tags | join: ', ' }}",
+      "paper_url"      : "{{ publication.paper_url }}",
+      "code_url"      : "{{ publication.code_url }}",
+      "date"     : "{{ publication.date }}",
+      "venue"   : "{{ publication.venue }}"
+    } {% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
