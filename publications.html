@@ -26,7 +26,19 @@ comments: false
   {%- endunless -%}
   <article class="publication-item">
     <h3 class="publication-item-title">
-      <a href="{{ publication.url }}" style="color: #b28951;">{{ publication.title | escape }}</a>
+      <!-- <a href="{{ publication.url }}" style="font-family: Georgia, 'New Century Schoolbook', Times, serif; font-size: 18px;">{{ publication.title | escape }}</a> -->
+      <a href="{{ publication.url }}">{{ publication.title | escape }}</a>
+      [ {% if publication.venue %}<span class="publication-venue">{{ publication.venue }}</span>{% endif %}
+      {% if publication.year %}<span class="publication-year">{{ publication.year }}</span>{% endif %} ]
+
+      {% if publication.paper_url %}
+        <a href="{{ publication.paper_url }}" class="button" style="margin-left: 10px; padding: 3px 8px; background-color: #4693d7; color: white; text-decoration: none; border-radius: 4px; font-size: 14px;">Paper</a>
+      {% endif %}
+      {% if publication.code_url %}
+        <a href="{{ publication.code_url }}" class="button" style="margin-left: 5px; padding: 3px 8px; background-color: #2ebda1; color: white; text-decoration: none; border-radius: 4px; font-size: 14px;">Code</a>
+      {% endif %}
+      <!-- <a href="{{ publication.paper_url }}" class="button" style="margin-left: 10px; padding: 5px 10px; background-color: #007bff; color: white; text-decoration: none; border-radius: 4px;">Paper</a>
+      <a href="{{ publication.code_url }}" class="button" style="margin-left: 5px; padding: 5px 10px; background-color: #28a745; color: white; text-decoration: none; border-radius: 4px;">Code</a> -->
     </h3> 
   </article>
 {%- endfor -%}

@@ -9,8 +9,8 @@ home: true
 <article class="publication-item">
   <h4 class="publication-item-title">
     <a href="{{ publication.url }}">{{ publication.title | escape }}</a>
-    {% if publication.venue %}<span class="publication-venue">{{ publication.venue }}</span>{% endif %}
-    {% if publication.year %}<span class="publication-year">{{ publication.year }}</span>{% endif %}
+    [ {% if publication.venue %}<span class="publication-venue">{{ publication.venue }}</span>{% endif %}
+    {% if publication.year %}<span class="publication-year">{{ publication.year }}</span>{% endif %} ]
   </h4>
 </article>
 {%- endfor -%}

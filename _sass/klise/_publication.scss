@@ -90,7 +90,7 @@ figure {
 }
 
 a {
-    color: $text-link-blue;
+    color: $text-link-orange;
     text-decoration: none;
     &[target="_blank"]::after {
     content: " \2197";
@@ -102,11 +102,11 @@ a {
     }
 
     &:hover {
-    color: $text-link-blue-active;
+    color: $text-link-orange-active;
     }
 
     &:focus {
-    color: $text-link-blue;
+    color: $text-link-orange;
     }
 }
 
@@ -146,7 +146,7 @@ h6 {
 
     &:hover {
     .anchor-head {
-        color: $text-link-blue;
+        color: $text-link-orange;
         opacity: 1;
     }
     }

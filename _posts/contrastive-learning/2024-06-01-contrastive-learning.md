@@ -72,35 +72,35 @@ Here's a curated list of papers on contrastive learning:
 
 
 **[SimCLR: A Simple Framework for Contrastive Learning of Visual Representations](https://arxiv.org/abs/2002.05709)**  
-   Authors: Ting Chen, Simon Kornblith, Mohammad Norouzi, Geoffrey Hinton  
+   Authors: Ting Chen, Simon Kornblith, Mohammad Norouzi, Geoffrey Hinton \\
    Venue: ECCV 2020  
 
 **[MoCo: Momentum Contrast for Unsupervised Visual Representation Learning](https://arxiv.org/abs/1911.05722)**  
-   Authors: Kaiming He, Haoqi Fan, Yuxin Wu, Saining Xie, Ross Girshick  
+   Authors: Kaiming He, Haoqi Fan, Yuxin Wu, Saining Xie, Ross Girshick \\
    Venue: CVPR 2020  
 
 **[SwAV: Unsupervised Learning of Visual Features by Contrasting Cluster Assignments](https://arxiv.org/abs/2006.09882)**  
-   Authors: Mathilde Caron, Ishan Misra, Julien Mairal, Priya Goyal, Piotr Bojanowski, Armand Joulin  
+   Authors: Mathilde Caron, Ishan Misra, Julien Mairal, Priya Goyal, Piotr Bojanowski, Armand Joulin \\
    Venue: NeurIPS 2020  
 
 **[MoCo v2: Improved Baselines with Momentum Contrastive Learning](https://arxiv.org/abs/2003.04297)**  
-   Authors: Xinlei Chen, Haoqi Fan, Ross Girshick, Kaiming He  
+   Authors: Xinlei Chen, Haoqi Fan, Ross Girshick, Kaiming He \\
    Venue: arXiv preprint  
 
 **[BYOL: Bootstrap Your Own Latent - A New Approach to Self-Supervised Learning](https://arxiv.org/abs/2006.07733)**  
-   Authors: Jean-Bastien Grill, Florian Strub, Florent Altché, Corentin Tallec, Pierre H. Richemond, Elena Buchatskaya, Carl Doersch, Bernardo Avila Pires, Zhaohan Daniel Guo, Mohammad Gheshlaghi Azar, Bilal Piot, Koray Kavukcuoglu, Rémi Munos, Michal Valko  
+   Authors: Jean-Bastien Grill, Florian Strub, Florent Altché, Corentin Tallec, Pierre H. Richemond, Elena Buchatskaya, Carl Doersch, Bernardo Avila Pires, Zhaohan Daniel Guo, Mohammad Gheshlaghi Azar, Bilal Piot, Koray Kavukcuoglu, Rémi Munos, Michal Valko \\
    Venue: NeurIPS 2020  
 
 **[Barlow Twins: Self-Supervised Learning via Redundancy Reduction](https://arxiv.org/abs/2103.03230)**  
-   Authors: Jure Zbontar, Li Jing, Ishan Misra, Yann LeCun, Stéphane Deny
+   Authors: Jure Zbontar, Li Jing, Ishan Misra, Yann LeCun, Stéphane Deny \\
    Venue: arXiv preprint  
 
 **[CLIP: Contrastive Language-Image Pre-training](https://arxiv.org/abs/2103.00020)**  
-   Authors: Alec Radford, Jong Wook Kim, Chris Hallacy, Aditya Ramesh, Gabriel Goh, Sandhini Agarwal, Girish Sastry, Amanda Askell, Pamela Mishkin, Jack Clark, Gretchen Krueger, Ilya Sutskever
+   Authors: Alec Radford, Jong Wook Kim, Chris Hallacy, Aditya Ramesh, Gabriel Goh, Sandhini Agarwal, Girish Sastry, Amanda Askell, Pamela Mishkin, Jack Clark, Gretchen Krueger, Ilya Sutskever \\
    Venue: NeurIPS 2021  
 
 **[SimCSE: Simple Contrastive Learning of Sentence Embeddings](https://arxiv.org/abs/2104.08821)**  
-   Authors: Tianyu Gao, Xingcheng Yao, Danqi Chen  
+   Authors: Tianyu Gao, Xingcheng Yao, Danqi Chen \\
    Venue: arXiv preprint  
 
 <!-- # Some further thoughts <a name="some-further-thoughts"></a> -->
