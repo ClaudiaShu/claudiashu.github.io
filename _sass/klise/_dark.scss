@@ -87,6 +87,10 @@ body[data-theme="dark"] {
     }
   }
 
+  .button:hover {
+    box-shadow: 0 3px 3px rgba(192, 191, 191, 0.5);
+  }
+
   // Link
   a {
     color: inherit;
