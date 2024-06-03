@@ -31,11 +31,18 @@ comments: false
       [ {% if publication.venue %}<span class="publication-venue">{{ publication.venue }}</span>{% endif %}
       {% if publication.year %}<span class="publication-year">{{ publication.year }}</span>{% endif %} ]
 
-      {% if publication.paper_url %}
+      <!-- {% if publication.paper_url %}
         <a href="{{ publication.paper_url }}" class="button" style="margin-left: 5px; padding: 3px 8px; background-color: #4693d7; color: white; text-decoration: none; border-radius: 4px; font-size: 14px;">Paper</a>
       {% endif %}
       {% if publication.code_url %}
         <a href="{{ publication.code_url }}" class="button" style="margin-left: 5px; padding: 3px 8px; background-color: #2ebda1; color: white; text-decoration: none; border-radius: 4px; font-size: 14px;">Code</a>
+      {% endif %} -->
+
+      {% if publication.paper_url %}
+        <a href="{{ publication.paper_url }}" class="button" style="background-color: #4693d7; color: white; text-decoration: none; border-radius: 4px; padding: 3px 8px; font-size: 14px; display: inline-block; width: 40px; height: 15px; line-height: 15px; text-align: center;">Paper</a>
+      {% endif %}
+      {% if publication.code_url %}
+        <a href="{{ publication.code_url }}" class="button" style="background-color: #2ebda1; color: white; text-decoration: none; border-radius: 4px; padding: 3px 8px; font-size: 14px; display: inline-block; width: 40px; height: 15px; line-height: 15px; text-align: center;">Code</a>
       {% endif %}
       <!-- <a href="{{ publication.paper_url }}" class="button" style="margin-left: 10px; padding: 5px 10px; background-color: #007bff; color: white; text-decoration: none; border-radius: 4px;">Paper</a>
       <a href="{{ publication.code_url }}" class="button" style="margin-left: 5px; padding: 5px 10px; background-color: #28a745; color: white; text-decoration: none; border-radius: 4px;">Code</a> -->
