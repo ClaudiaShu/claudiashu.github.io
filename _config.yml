@@ -22,9 +22,8 @@ author:
   avatar: /assets/img/profile_photo.png # change with your own avatar
 
 # URL settings
-url: "https://claudiashu.github.io" #
-baseurl: "https://claudiashu.github.io"
-# baseurl: ""
+url: "https://claudiashu.github.io"
+baseurl: ""
 permalink: /:title/
 google_analytics: # leave it blank if not wish
 fb_appid:
