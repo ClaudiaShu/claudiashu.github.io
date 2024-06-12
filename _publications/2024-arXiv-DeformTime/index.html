@@ -1,0 +1,112 @@
+---
+layout: page
+title: "DeformTime: Capturing Variable Dependencies with Deformable Attention for Time Series Forecasting"
+date: 2024-06-02
+permalink: /publications/2024-arXiv-DeformTime/
+venue: "preprint"
+year: 2024
+paper_url: "https://arxiv.org/abs/2406.07438"
+code_url: "https://github.com/ClaudiaShu/DeformTime"
+abbrev: "DeformTime"
+description: ""
+---
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+
+
+<title>Shu: DeformTime</title>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
+
+</head>
+
+<body>
+
+<div id="primarycontent">
+<center><h3><a class=link href="https://claudiashu.github.io/">Yuxuan Shu</a>&nbsp;&nbsp;&nbsp;<a class=link href="https://lampos.net/home">Vasileios Lampos</a></h3></center>
+
+<center><h4><strong>{{ page.venue }} {{ page.year }}</strong></h4></center>
+	
+<center><h4><strong><a href="{{ page.code_url }}"> Code </a>&nbsp;&nbsp;&nbsp;<a href="{{ page.paper_url }}"> Paper </a></strong></h4></center> 
+
+<center><img src="misc/figure1.png" style="display:inline-block; width:100%"><br></center>
+
+<!--Abstract-->
+<div class="container" style="padding-top: 20px;">
+<h2><strong>Abstract</strong></h2>
+<p style='text-align: justify; '>
+  In multivariate time series (MTS) forecasting, existing state-of-the-art deep learning approaches tend to focus on autoregressive formulations and overlook the information within exogenous indicators. To address this limitation, we present <span class="small-caps">DeformTime</span>, a neural network architecture that attempts to capture correlated temporal patterns from the input space, and hence, improve forecasting accuracy. It deploys two core operations performed by deformable attention blocks (DABs): learning dependencies across variables from different time steps (variable DAB), and preserving temporal dependencies in data from previous time steps (temporal DAB). Input data transformation is explicitly designed to enhance learning from the deformed series of information while passing through a DAB. We conduct extensive experiments on 6 MTS data sets, using previously established benchmarks as well as challenging infectious disease modelling tasks with more exogenous variables. The results demonstrate that <span class="small-caps">DeformTime</span> improves accuracy against previous competitive methods across the vast majority of MTS forecasting tasks, reducing the mean absolute error by 10% on average. Notably, performance gains remain consistent across longer forecasting horizons.
+</div>
+	
+
+<!--Highlights-->
+<div class="container" style="padding-top: 20px;">
+
+  <h2><strong>Highlights</strong></h2><hr>
+  <p style='text-align: justify; '>
+    We propose <span class="small-caps">DeformTime</span>, a novel MTS forecasting model that better captures inter- and intra-variate dependencies at different temporal granularities. It comprises two Deformable Attention Blocks (DAB) which allow the model to adaptively focus on more informative neighbouring attributes. The below figure shows how different dependencies are established:
+  
+    <center><img src="misc/dependency.png" style="display:inline-block; width:100%"><br></center>
+
+    (a) The inter-variable dependency is established across different variables over time. (b) The intra-variable dependency focuses on the important information of the specific variable across time. Both dependencies are adaptively established w.r.t. the input.
+
+</div>
+	
+<!--Datasets-->
+<div class="container" style="padding-top: 20px;">
+  <h2><strong>Datasets</strong></h2>
+    We conduct experiments on 6 real-world data sets. These include 3 established benchmarks from previously published papers, and 3 self-collected data sets focusing on disease rate modelling tasks. We provide further details in obtaining the datasets in our <a href="https://github.com/ClaudiaShu/DeformTime">GitHub repository</a>.
+    <!-- We pretrained on <a href="https://mm.kaist.ac.kr/datasets/voxceleb/">VoxCeleb1</a> dataset and evaluated on two Facial eExpression Recognition datasets, <a href="http://mohammadmahoor.com/affectnet/">AffectNet</a> and <a href="https://www.kaggle.com/datasets/msambare/fer2013">FER2013</a>. We further evaluated on a Face Recognition dataset, <a href="http://vis-www.cs.umass.edu/lfw/">LFW</a>. In our experiment, we used the released version provided by scikit-learn. The usage can be found <a href="https://scikit-learn.org/0.19/datasets/labeled_faces.html">here</a>. -->
+    
+  <!-- <p><p class=green> &#187;</p> <strong>VoxCeleb1</strong>
+    VoxCeleb1 is a large-scale dataset that contains videos with subjects spanning a wide range of different ethnicities, accents, professions and ages. It can be used for a number of applications including: Emotion recognition, Speaker identification, and Face generation etc.
+    Details of the dataset can be found <a href="https://mm.kaist.ac.kr/datasets/voxceleb/">here</a>.
+    
+  <p><p class=green> &#187;</p> <strong>AffectNet</strong>
+    AffectNet is a database of facial expressions in the wild that contains more than 1M facial images. It enables research in automated facial expression recognition in two streams: Emotion classification and Valence & Arousal recognition.
+    Details of the dataset can be found <a href="http://mohammadmahoor.com/affectnet/">here</a>. 
+    
+  <p><p class=green> &#187;</p> <strong>FER2013</strong>
+    FER2013 is a widly known database for facial expression recognition.
+    Details of the dataset can be found <a href="https://www.kaggle.com/datasets/msambare/fer2013">here</a>. 
+    
+  <p><p class=green> &#187;</p> <strong>LFW</strong>
+    LFW is a collection of JPEG pictures of famous people collected over the internet desgned for Face Recognition (or Face Identification).
+    Details of the dataset can be found <a href="http://vis-www.cs.umass.edu/lfw/">here</a>. 
+    We used the released version provided by scikit-learn. The usage can be found <a href="https://scikit-learn.org/0.19/datasets/labeled_faces.html">here</a>.  -->
+    
+  </div>
+
+<!-- citation -->
+<div class="container" style="padding-top: 20px;">
+  <h2 id="citation" style="padding-top: 80px; margin-top: -80px;"><strong>Citation</strong></h2><hr>
+  <pre style="padding: 1.0rem; margin-right: 0; margin-left: 0; font-size:12px">
+    {% raw %}
+    @article{shu2024deformtime,
+      author    = {Yuxuan Shu and Vasileios Lampos},
+      title     = {{\textsc{DeformTime}: Capturing Variable Dependencies with 
+                  Deformable Attention for Time Series Forecasting}},
+      year      = {2024},
+      journal   = {Preprint under review}
+    }
+    {% endraw %}
+</pre>
+
+</div>
+	
+
+<!-- Footer -->
+<div class="container" style="padding-top: 50px;">
+    <center>
+      <footer>
+        <p>© Yuxuan Shu {{ page.year }}</p>
+      </footer>
+    </center>
+</div>
+
+
+</body></html>

@@ -430,3 +430,10 @@
     background-color: rgba(128, 128, 128, 0.1);
   }
 }
+
+.small-caps {
+  font-family: 'Times New Roman', Times, serif;
+  font-variant: small-caps;
+  font-size: 1em; 
+  // font-weight: bold;  
+}
