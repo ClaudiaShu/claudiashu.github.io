@@ -223,6 +223,14 @@
   color: $black;
 }
 
+.posts-subitem-note li:before {
+  content: "\2022"; /* Unicode character for a bullet point */
+  color: #007bff; /* Custom color */
+  font-size: 1.2em; /* Adjust size as needed */
+  margin-left: 0.5em; /* Adjust to align with list text */
+  margin-right: 0.4em; /* Adjust spacing between bullet and text */
+}
+
 // List of posts
 .post-item {
   display: flex;
@@ -262,6 +270,13 @@
       }
     }
   }
+}
+
+.publications-item-note {
+  font-size: $base-font-size;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: $black;
 }
 
 // List of publications

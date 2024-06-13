@@ -72,6 +72,10 @@ body[data-theme="dark"] {
     border-color: $dark-light;
   }
 
+  .posts-subitem-note li:before {
+    color: #e5ff00;
+  }
+
   // Post Meta
   .post-meta {
     color: $dark-gray;
