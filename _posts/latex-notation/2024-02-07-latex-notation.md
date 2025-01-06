@@ -7,7 +7,7 @@ permalink: /posts/latex-notations/
 usemathjax: true
 ---
 
-In this guide, I'll walk you through the basics of coding LaTeX notations for academic writing. Let's get started! 🎉
+When I first started my PhD journey, one of the unexpected challenges I faced wasn't the complex mathematics or intricate algorithms - it was getting the LaTeX notations right in my papers! I found myself constantly googling "How to make decent formatting with LaTeX" or "proper mathematical notation for vectors" every time I sat down to write. After countless paper revisions and gentle reminders from my advisors about notation consistency, I've compiled this comprehensive guide to help fellow researchers avoid the same pitfalls. Whether you're writing your first academic paper or just want to ensure your mathematical notations are on point, this guide will walk you through everything you need to know. Let's dive in! 🎓
 
 <!-- # Proper latex notations -->
  <!-- -- continuous updating -->
