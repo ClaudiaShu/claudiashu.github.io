@@ -10,7 +10,7 @@ usemathjax: true
 
 # Understanding Error Metrics in Time Series Forecasting: Mean vs Median
 
-In time series forecasting, evaluating the performance of a model often involves choosing an appropriate error metric. A subtle yet critical distinction often overlooked is that **error metrics based on squared errors** (e.g., Mean Squared Error (MSE), Root Mean Squared Error (RMSE)) optimize for the **mean**, whereas **metrics based on absolute errors** (e.g., Mean Absolute Error (MAE), Mean Absolute Scaled Error (MASE)) optimize for the **median**.
+In time series forecasting, evaluating the performance of a model often involves choosing an appropriate error metric. A subtle yet critical distinction often overlooked is that **error metrics based on squared errors** (e.g., Mean Squared Error (MSE), Root Mean Squared Error (RMSE)) optimise for the **mean**, whereas **metrics based on absolute errors** (e.g., Mean Absolute Error (MAE), Mean Absolute Scaled Error (MASE)) optimise for the **median**.
 
 This difference is fundamental and has practical implications, particularly when the underlying data distribution is **skewed**.
 
@@ -36,7 +36,7 @@ Imagine a perfect world where data is symmetric (think Gaussian without outliers
 ![Symmetric Distribution]({{ site.baseurl }}/assets/img/time-series-metrics/mean_vs_median.png)
 
 ### Skewed Distribution with Outliers
-Now, picture a dataset with some wild outliers. The mean gets pulled toward these outliers, while the median stays chill. This makes squared-error metrics reflect the outliers' influence, while absolute-error metrics remain unfazed.
+Now, picture a dataset with some wild outliers. The mean gets pulled toward these outliers, while the median stays chill. This makes squared-error metrics reflect the outliers' influence, while absolute-error metrics remain unfased.
 
 ![Effect of Outliers on Mean vs Median]({{ site.baseurl }}/assets/img/time-series-metrics/outliers_effect.png)
 
@@ -49,7 +49,7 @@ Now, picture a dataset with some wild outliers. The mean gets pulled toward thes
 ## **Practical Implications**
 - **When to Use Squared Errors:**  
   Go for MSE or RMSE when:
-  - You want to heavily penalize large deviations.
+  - You want to heavily penalise large deviations.
   - Your data is symmetric, or outliers are rare.
 
 - **When to Use Absolute Errors:**  
@@ -59,4 +59,4 @@ Now, picture a dataset with some wild outliers. The mean gets pulled toward thes
 
 ---
 
-Understanding these differences helps you pick the right error metric based on your data's quirks and your forecasting goals. Whether you're optimizing for the mean or the median, the right choice can lead to better insights, especially with skewed or noisy data. Happy forecasting! 📈
+Understanding these differences helps you pick the right error metric based on your data's quirks and your forecasting goals. Whether you're optimising for the mean or the median, the right choice can lead to better insights, especially with skewed or noisy data. Happy forecasting! 📈
