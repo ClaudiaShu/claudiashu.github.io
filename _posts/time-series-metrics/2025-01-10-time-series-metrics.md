@@ -60,3 +60,10 @@ Now, picture a dataset with some wild outliers. The mean gets pulled toward thes
 ---
 
 Understanding these differences helps you pick the right error metric based on your data's quirks and your forecasting goals. Whether you're optimising for the mean or the median, the right choice can lead to better insights, especially with skewed or noisy data. Happy forecasting! 📈
+
+---
+
+## **References**
+
+1. Hewamalage, H., Ackermann, K., & Bergmeir, C. (2023). Forecast Evaluation for Data Scientists: Common Pitfalls and Best Practices. *Data Mining and Knowledge Discovery*
+
