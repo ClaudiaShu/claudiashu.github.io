@@ -1,17 +1,18 @@
 ---
 layout: post
 title: "The concavity of dual function"
-date: 2024-06-07
-categories: tutorials
+date: 2024-08-21
+categories: quicknote
 permalink: /posts/concave-dual-problem/
 usemathjax: true
 ---
 
-When I was reading the book "Mathematics for Machine learning", I :
 
-Therefore $\min_{x \in \mathbb{R}^d} L(x, \lambda)$ is a pointwise minimum of affine functions of $\lambda$, and hence $D(\lambda)$ is concave even though $f(\cdot)$ and $g_i(\cdot)$ may be nonconvex.
+When I was reading the book "Mathematics for Machine Learning", I stumbled upon the concept of the concavity of the dual function in Lagrange duality and found it quite intriguing.
 
-I got a bit confused at first, so I decided to make a post on this to ().
+The idea is that $ \min_{x \in \mathbb{R}^d} L(x, \lambda) $ is a pointwise minimum of affine functions of $ \lambda $, which means that $ D(\lambda) $ is concave even if $ f(\cdot) $ and $ g_i(\cdot) $ are not convex.
+
+I got a bit confused at first, so I decided to make a post on this to clarify my understanding.
 
 
 # Concavity of the Dual Function in Lagrange Duality
@@ -42,27 +43,27 @@ $$ D(\lambda) = \inf_{x \in \mathbb{R}^d} L(x, \lambda) $$
 
 ## Proof of Concavity
 
-- Consider $ \lambda^1, \lambda^2 \in \mathbb{R}^m $ and a scalar $ \theta \in [0, 1] $.
+Consider $ \lambda^1, \lambda^2 \in \mathbb{R}^m $ and a scalar $ \theta \in [0, 1] $.
 
-- Define $ \lambda^\theta = \theta \lambda^1 + (1 - \theta) \lambda^2 $.
+Define $ \lambda^\theta = \theta \lambda^1 + (1 - \theta) \lambda^2 $.
 
-- By definition of the dual function:
+By definition of the dual function:
 
   $$ D(\lambda^\theta) = \inf_{x} \left[ f(x) + \sum_{i=1}^m (\theta \lambda_i^1 + (1 - \theta) \lambda_i^2) g_i(x) \right] $$
 
-- We can rewrite this as:
+We can rewrite this as:
 
   $$ D(\lambda^\theta) = \inf_{x} \left[ \theta \left( f(x) + \sum_{i=1}^m \lambda_i^1 g_i(x) \right) + (1 - \theta) \left( f(x) + \sum_{i=1}^m \lambda_i^2 g_i(x) \right) \right] $$
 
-- Since the infimum of a sum is less than or equal to the sum of the infima (by the properties of infima):
+Since the infimum of a sum is less than or equal to the sum of the infima (by the properties of infima):
 
   $$ D(\lambda^\theta) \leq \theta \inf_{x} \left[ f(x) + \sum_{i=1}^m \lambda_i^1 g_i(x) \right] + (1 - \theta) \inf_{x} \left[ f(x) + \sum_{i=1}^m \lambda_i^2 g_i(x) \right] $$
 
-- Which simplifies to:
+Which simplifies to:
 
   $$ D(\lambda^\theta) \leq \theta D(\lambda^1) + (1 - \theta) D(\lambda^2) $$
 
-- This inequality shows that $ D(\lambda) $ is concave, because $ D(\lambda^\theta) \leq \theta D(\lambda^1) + (1 - \theta) D(\lambda^2) $ holds for all $ \lambda^1, \lambda^2 \in \mathbb{R}^m $ and $ \theta \in [0, 1] $.
+This inequality shows that $ D(\lambda) $ is concave, because $ D(\lambda^\theta) \leq \theta D(\lambda^1) + (1 - \theta) D(\lambda^2) $ holds for all $ \lambda^1, \lambda^2 \in \mathbb{R}^m $ and $ \theta \in [0, 1] $.
 
 ## Conclusion
 
