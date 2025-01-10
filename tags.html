@@ -15,26 +15,21 @@ excerpt: Sorted article by tags.
 
 {%- for tag in site.tags -%}
   {%- capture name -%}{{ tag | first }}{%- endcapture -%}
-  <h2 id="{{ name }}">{{ name | upcase }}</h2>
-  {%- for post in site.tags[name] -%}
-    <article class="publication-item" id="results-container">
-      <span class="publication-item-date">{{ publication.date | date: "%b %d, %Y" }}</span>
-      <h3 class="publication-item-title">
-        <a href="{{ publication.url }}">{{ publication.title | escape }}</a>
-      </h3> 
-    </article>
-  {%- endfor -%}
-{%- endfor -%}
-
-{%- for tag in site.tags -%}
-  {%- capture name -%}{{ tag | first }}{%- endcapture -%}
-  <h2 id="{{ name }}">{{ name | upcase }}</h2>
-  {%- for post in site.tags[name] -%}
-    <article class="post-item" id="results-container">
-      <span class="post-item-date">{{ post.date | date: "%b %d, %Y" }}</span>
-      <h3 class="post-item-title">
-        <a href="{{ post.url }}">{{ post.title | escape }}</a>
-      </h3> 
-    </article>
-  {%- endfor -%}
+  <h2 id="{{ name }}" class="tag-title">
+    <i class="fas fa-tag"></i> {{ name | upcase }}
+  </h2>
+  <div class="tag-posts">
+    {%- for post in site.tags[name] -%}
+      <article class="post-item" id="results-container">
+        <span class="post-item-bullet">•</span>
+        <span class="post-item-date">{{ post.date | date: "%b %d, %Y" }}</span>
+        <h3 class="post-item-title">
+          <a href="{{ post.url }}">{{ post.title | escape }}</a>
+        </h3>
+      </article>
+      {% unless forloop.last %}
+        <div class="post-item-separator"></div>
+      {% endunless %}
+    {%- endfor -%}
+  </div>
 {%- endfor -%}

@@ -3,6 +3,7 @@ layout: post
 title: "Transforming the probability density function (PDF)"
 date: 2024-06-07
 categories: tutorials
+tags: [math]
 permalink: /posts/probability-density-function/
 usemathjax: true
 ---

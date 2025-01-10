@@ -3,6 +3,7 @@ layout: post
 title: "Mind the Differences in Error Metrics"
 date: 2025-01-10
 categories: quicknote
+tags: [time-series, machine-learning]
 permalink: /posts/time-series-metrics/
 usemathjax: true
 ---

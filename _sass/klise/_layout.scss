@@ -234,8 +234,8 @@
 // List of posts
 .post-item {
   display: flex;
-  padding-top: 5px;
-  padding-bottom: 6px;
+  padding-top: 2px;
+  padding-bottom: 2px;
   @extend %clearfix;
 
   // &:not(:first-child) {
@@ -272,7 +272,7 @@
   }
 }
 
-.publications-item-note {
+.publication-item-note {
   font-size: $base-font-size;
   font-weight: 700;
   margin-bottom: 5px;
@@ -451,4 +451,32 @@
   font-variant: small-caps;
   font-size: 1em; 
   // font-weight: bold;  
+}
+
+.tag-title {
+  margin-top: 2em;
+  border-bottom: 1px solid $light;
+  padding-bottom: 0.5em;
+  color: $black;
+  font-size: 1.4em;
+  
+  i {
+    margin-right: 0.5em;
+    color: $gray;
+  }
+}
+
+.tag-posts {
+  margin-left: 1em;
+}
+
+.post-item-bullet {
+  margin-right: 0.8em;
+  color: $gray;
+  font-size: 0.8em;
+}
+
+.post-item-separator {
+  margin: 0.3em 0;
+  border-bottom: 1px dashed rgba($light, 0.3);
 }

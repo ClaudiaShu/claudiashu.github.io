@@ -3,6 +3,7 @@ layout: post
 title: "The concavity of dual function"
 date: 2024-08-21
 categories: quicknote
+tags: [math]
 permalink: /posts/concave-dual-problem/
 usemathjax: true
 ---
