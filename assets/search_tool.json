@@ -1,0 +1,14 @@
+---
+layout: none
+---
+
+[
+    {% for tool in site.tools %}
+        {
+        "title"    : "{{ tool.title | escape }}",
+        "description" : "{{ tool.description | escape }}",
+        "tags"     : "{{ tool.tags | join: ', ' }}",
+        "date"     : "{{ tool.date }}",
+        } {% unless forloop.last %},{% endunless %}
+    {% endfor %}
+]

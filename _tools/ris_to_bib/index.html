@@ -1,0 +1,68 @@
+---
+title: RIS to BibTeX Converter
+layout: page
+permalink: /tools/ris_to_bib/
+date: 2025-01-10
+description: ""
+tags: [tools]
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RIS to BibTeX Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        textarea {
+            width: 100%;
+            height: 200px;
+        }
+        button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>RIS to BibTeX Converter</h1>
+    <textarea id="risInput" placeholder="Paste your RIS data here..."></textarea>
+    <button onclick="convertToBib()">Convert to BibTeX</button>
+    <textarea id="bibOutput" placeholder="BibTeX output will appear here..."></textarea>
+
+    <script>
+        function convertToBib() {
+            const risInput = document.getElementById('risInput').value;
+            const bibOutput = document.getElementById('bibOutput');
+            // Simple conversion logic (for demonstration purposes)
+            const bibData = risInput.replace(/TY\s+-\s+/g, '@article{')
+                                    .replace(/AU\s+-\s+/g, 'author = {')
+                                    .replace(/TI\s+-\s+/g, 'title = {')
+                                    .replace(/PY\s+-\s+/g, 'year = {')
+                                    .replace(/ER\s+-/g, '}')
+                                    .replace(/,(\s+)?/g, '},\n')
+                                    .replace(/(\s+)?=/g, ' = ')
+                                    .replace(/(\s+)?\n(\s+)?/g, '\n');
+            bibOutput.value = bibData;
+        }
+
+        // Example of using MutationObserver instead of 'DOMNodeInserted'
+        const targetNode = document.getElementById('risInput');
+        const config = { childList: true, subtree: true };
+
+        const callback = function(mutationsList, observer) {
+            for (let mutation of mutationsList) {
+                if (mutation.type === 'childList') {
+                    console.log('A child node has been added or removed.');
+                }
+            }
+        };
+
+        const observer = new MutationObserver(callback);
+        observer.observe(targetNode, config);
+    </script>
+</body>
+</html>

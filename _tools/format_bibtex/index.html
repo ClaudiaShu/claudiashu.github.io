@@ -1,0 +1,110 @@
+---
+title: BibTeX Formatter
+layout: page
+permalink: /tools/format_bibtex/
+date: 2025-01-10
+description: ""
+tags: [tools]
+---
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BibTeX Formatter</title>
+    <style>
+        .bibtex-formatter {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .input-section, .output-section {
+            margin-top: 20px;
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            font-family: monospace;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    
+    </style>
+    <script defer>
+        function formatBibtex() {
+            const input = document.getElementById('bibtex-input');
+            const output = document.getElementById('bibtex-output');
+            
+            try {
+                // Remove comments and empty lines
+                const cleanedInput = input.value.replace(/(%.*$)|\s+$/gm, '').trim();
+                const lines = cleanedInput.split(/\n/).filter(line => line.trim());
+                
+                // ... rest of your formatting code ...
+                
+                output.value = formatted.join('\n');
+                console.log('Output set to:', output.value);
+                
+            } catch (error) {
+                console.error('Error:', error);
+                output.value = `Error: ${error.message}`;
+            }
+        }
+
+        function copyToClipboard() {
+            const output = document.getElementById('bibtex-output');
+            const copyMessage = document.getElementById('copy-message');
+            
+            // Select the text
+            output.select();
+            output.setSelectionRange(0, 99999); // For mobile devices
+            
+            // Copy the text
+            navigator.clipboard.writeText(output.value).then(() => {
+                // Show the "Copied!" message
+                copyMessage.style.display = 'inline';
+                
+                // Hide the message after 2 seconds
+                setTimeout(() => {
+                    copyMessage.style.display = 'none';
+                }, 2000);
+            });
+        }
+
+        // Verify elements are loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded');
+            const input = document.getElementById('bibtex-input');
+            const output = document.getElementById('bibtex-output');
+            console.log('Input element:', input);
+            console.log('Output element:', output);
+        });
+    </script>
+</head>
+
+<body>
+    <div class="bibtex-formatter">
+        <h2>BibTeX Formatter</h2>
+        <p>Paste your BibTeX entry below to format it. The tool will automatically reformat the entry.</p>
+
+        <div class="input-section">
+            <h3>Input</h3>
+            <textarea id="bibtex-input" rows="10" placeholder="Paste your BibTeX here..."></textarea>
+            <button onclick="formatBibtex()">Format</button>
+        </div>
+
+        <div class="output-section">
+            <h3>Output</h3>
+            <textarea id="bibtex-output" rows="10" readonly></textarea>
+            <button onclick="copyToClipboard()">Copy to Clipboard</button>
+        </div>
+
+        <div><h3>Reformat rules</h3></div>
+    </div>
+
+</body>
+
+</html>

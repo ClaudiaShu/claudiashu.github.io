@@ -10,6 +10,10 @@
   url: /posts/
   external: false
 
+# - title: tools
+#   url: /tools/
+#   external: false
+
 - title: gallery
   url: /gallery/
   external: false

@@ -235,6 +235,15 @@ body[data-theme="dark"] {
     }
   }
 
+  // Tool Item
+  .tool-item {
+    h3.tool-item-title {
+      a {
+        color: $dark-white;
+      }
+    }
+  }
+
   // citation
   .container pre {
     background-color: $dark-light;

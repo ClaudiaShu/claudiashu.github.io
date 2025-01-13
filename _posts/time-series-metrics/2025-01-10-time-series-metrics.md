@@ -33,12 +33,12 @@ For **symmetric distributions**, the mean and the median are besties—they coin
 ### Symmetric Distribution
 Imagine a perfect world where data is symmetric (think Gaussian without outliers). Here, the mean and median are practically twins, and both metrics give you similar results.
 
-![Symmetric Distribution]({{ site.baseurl }}/assets/img/time-series-metrics/mean_vs_median.png)
+![Symmetric Distribution]({{ site.baseurl }}/posts/time-series-metrics/misc/mean_vs_median.png)
 
 ### Skewed Distribution with Outliers
 Now, picture a dataset with some wild outliers. The mean gets pulled toward these outliers, while the median stays chill. This makes squared-error metrics reflect the outliers' influence, while absolute-error metrics remain unfased.
 
-![Effect of Outliers on Mean vs Median]({{ site.baseurl }}/assets/img/time-series-metrics/outliers_effect.png)
+![Effect of Outliers on Mean vs Median]({{ site.baseurl }}/posts/time-series-metrics/misc/outliers_effect.png)
 
 - **Red Line:** The mean, swayed by outliers.
 - **Green Line:** The median, staying true to the main data.
