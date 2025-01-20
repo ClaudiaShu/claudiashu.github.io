@@ -33,25 +33,17 @@ tags: [tools]
         }
     
     </style>
-    <script defer>
+</head>
+
+<body>
+    <script>
         function formatBibtex() {
+            console.log('formatBibtex called');
             const input = document.getElementById('bibtex-input');
             const output = document.getElementById('bibtex-output');
-            
-            try {
-                // Remove comments and empty lines
-                const cleanedInput = input.value.replace(/(%.*$)|\s+$/gm, '').trim();
-                const lines = cleanedInput.split(/\n/).filter(line => line.trim());
-                
-                // ... rest of your formatting code ...
-                
-                output.value = formatted.join('\n');
-                console.log('Output set to:', output.value);
-                
-            } catch (error) {
-                console.error('Error:', error);
-                output.value = `Error: ${error.message}`;
-            }
+            console.log('Input element:', input);
+            console.log('Output element:', output);
+            output.value = 'Test';
         }
 
         function copyToClipboard() {
@@ -74,18 +66,16 @@ tags: [tools]
             });
         }
 
-        // Verify elements are loaded
+        // Add this to test if the elements are properly loaded
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('DOM loaded');
             const input = document.getElementById('bibtex-input');
             const output = document.getElementById('bibtex-output');
             console.log('Input element:', input);
             console.log('Output element:', output);
         });
     </script>
-</head>
 
-<body>
+
     <div class="bibtex-formatter">
         <h2>BibTeX Formatter</h2>
         <p>Paste your BibTeX entry below to format it. The tool will automatically reformat the entry.</p>
