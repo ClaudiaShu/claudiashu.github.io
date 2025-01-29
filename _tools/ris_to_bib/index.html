@@ -7,62 +7,86 @@ description: ""
 tags: [tools]
 ---
 
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html xml:lang="en" xmlns="http://www.w3c.org/1999/xhtml" lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RIS to BibTeX Converter</title>
     <style>
-        body {
+        .ris-to-bibtex-converter {
             font-family: Arial, sans-serif;
             margin: 20px;
         }
+        .input-section, .output-section {
+            margin-top: 20px;
+        }
         textarea {
             width: 100%;
-            height: 200px;
+            padding: 10px;
+            font-family: monospace;
         }
         button {
             margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
         }
     </style>
-</head>
-<body>
-    <h1>RIS to BibTeX Converter</h1>
-    <textarea id="risInput" placeholder="Paste your RIS data here..."></textarea>
-    <button onclick="convertToBib()">Convert to BibTeX</button>
-    <textarea id="bibOutput" placeholder="BibTeX output will appear here..."></textarea>
-
     <script>
-        function convertToBib() {
-            const risInput = document.getElementById('risInput').value;
-            const bibOutput = document.getElementById('bibOutput');
-            // Simple conversion logic (for demonstration purposes)
-            const bibData = risInput.replace(/TY\s+-\s+/g, '@article{')
-                                    .replace(/AU\s+-\s+/g, 'author = {')
-                                    .replace(/TI\s+-\s+/g, 'title = {')
-                                    .replace(/PY\s+-\s+/g, 'year = {')
-                                    .replace(/ER\s+-/g, '}')
-                                    .replace(/,(\s+)?/g, '},\n')
-                                    .replace(/(\s+)?=/g, ' = ')
-                                    .replace(/(\s+)?\n(\s+)?/g, '\n');
-            bibOutput.value = bibData;
+        function convertRisToBib() {
+            const input = document.getElementById('ris-input').value;
+            const output = document.getElementById('bibtex-output');
+            // Simple conversion logic for demonstration purposes
+            let bibtex = input
+                .replace(/TY\s+-\s+/g, '@article{')
+                .replace(/AU\s+-\s+/g, 'author = {')
+                .replace(/TI\s+-\s+/g, 'title = {')
+                .replace(/PY\s+-\s+/g, 'year = {')
+                .replace(/ER\s+-/g, '}')
+                .replace(/(\r\n|\n|\r)/gm, ',\n'); // Add new lines for better formatting
+            output.value = bibtex;
         }
 
-        // Example of using MutationObserver instead of 'DOMNodeInserted'
-        const targetNode = document.getElementById('risInput');
-        const config = { childList: true, subtree: true };
-
-        const callback = function(mutationsList, observer) {
-            for (let mutation of mutationsList) {
-                if (mutation.type === 'childList') {
-                    console.log('A child node has been added or removed.');
-                }
-            }
-        };
-
-        const observer = new MutationObserver(callback);
-        observer.observe(targetNode, config);
+        function copyToClipboard() {
+            const output = document.getElementById('bibtex-output');
+            const copyMessage = document.getElementById('copy-message');
+            
+            // Select the text
+            output.select();
+            output.setSelectionRange(0, 99999); // For mobile devices
+            
+            // Copy the text
+            navigator.clipboard.writeText(output.value).then(() => {
+                // Show the "Copied!" message
+                copyMessage.style.display = 'inline';
+                
+                // Hide the message after 2 seconds
+                setTimeout(() => {
+                    copyMessage.style.display = 'none';
+                }, 2000);
+            });
+        }
     </script>
+</head>
+
+<body>
+    <div class="ris-to-bibtex-converter">
+        <h2>RIS to BibTeX Converter</h2>
+        <p>Paste your RIS entry below to convert it to BibTeX format.</p>
+
+        <div class="input-section">
+            <h3>Input</h3>
+            <textarea id="ris-input" rows="10" placeholder="Paste your RIS here..."></textarea>
+            <button onclick="convertRisToBib()">Convert</button>
+        </div>
+
+        <div class="output-section">
+            <h3>Output</h3>
+            <textarea id="bibtex-output" rows="10" readonly></textarea>
+            <button onclick="copyToClipboard()">Copy to Clipboard</button>
+            <span id="copy-message" style="display:none;">Copied!</span>
+        </div>
+    </div>
 </body>
+
 </html>

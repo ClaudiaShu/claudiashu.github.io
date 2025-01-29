@@ -35,7 +35,7 @@ collections:
   publications:
     output: true
   tools:
-    output: false
+    output: true
 
 # Markdown settings
 markdown: kramdown

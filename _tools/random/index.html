@@ -1,0 +1,31 @@
+---
+title: Random
+layout: page
+permalink: /tools/random/
+date: 2025-01-10
+description: ""
+tags: [tools]
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number Generator</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Random Number Generator</h1>
+        <p>Click the button to generate a random number between 1 and 100.</p>
+        <button onclick="generateRandomNumber()">Generate</button>
+        <div id="result"></div>
+    </div>
+    <script>
+        function generateRandomNumber() {
+            const randomNumber = Math.floor(Math.random() * 100) + 1;
+            document.getElementById('result').innerText = randomNumber;
+        }
+    </script>
+</body>
+</html>
