@@ -87,16 +87,35 @@ pdflatex diff.tex
 
 This will produce a PDF where changes are visually highlighted.
 
-**Customization**
+**Customization:** You can customize the output using additional options:
 
-You can customize the output using additional options:
+Use `--type=CFONT` to highlight changes using colored text instead of underlines and strikethroughs:
+  
+```
+latexdiff --type=CFONT old.tex new.tex > diff.tex
+  ```
 
-`--type=CFONT:` Highlights changes using colored text instead of underlines and strikethroughs.
+Use `--flatten` to expands `\input` and `\include` commands for comparison:
+  
+```
+latexdiff --flatten old.tex new.tex > diff.tex
+```
 
-`--flatten:` Expands `\input` and `\include` commands for comparison.
+To color what is added and not show what has been deleted, use the following options:
+
+```
+latexdiff --type=CFONT --append-textcmd="textcolor{blue}" --exclude-textcmd="st" old.tex new.tex > diff.tex
+```
+
+To exclude differences in changing the image size, use the following option:
+
+```
+latexdiff --graphics-markup=0 old.tex new.tex > diff.tex
+```
 
 Example:
 
 ```
-latexdiff --type=CFONT old.tex new.tex > diff.tex
+latexdiff --type=CFONT --append-textcmd="textcolor{blue}" --exclude-textcmd="st" --graphics-markup=0 old.tex new.tex > diff.tex
 ```
+
