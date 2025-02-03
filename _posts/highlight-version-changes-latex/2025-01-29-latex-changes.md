@@ -57,6 +57,12 @@ sudo apt-get install latexdiff  # For Debian/Ubuntu
 brew install latexdiff          # For macOS (using Homebrew)
 ```
 
+If brew is not installed on your macOS, install via:
+
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
 ### Step 2: Compare Two LaTeX Files
 
 Run the following command to compare `old.tex` and `new.tex`:
