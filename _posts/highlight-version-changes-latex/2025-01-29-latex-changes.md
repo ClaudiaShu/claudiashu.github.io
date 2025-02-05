@@ -104,7 +104,7 @@ latexdiff --flatten old.tex new.tex > diff.tex
 To color what is added and not show what has been deleted, use the following options:
 
 ```
-latexdiff --type=CFONT --append-textcmd="textcolor{blue}" --exclude-textcmd="st" old.tex new.tex > diff.tex
+latexdiff --append-textcmd="textcolor{blue}" --exclude-textcmd="st" old.tex new.tex > diff.tex
 ```
 
 To exclude differences in changing the image size, use the following option:
@@ -119,3 +119,4 @@ Example:
 latexdiff --type=CFONT --append-textcmd="textcolor{blue}" --exclude-textcmd="st" --graphics-markup=0 old.tex new.tex > diff.tex
 ```
 
+For more details, see: [Marking up differences between latex files with latexdiff](https://texdoc.org/serve/latexdiff/0)

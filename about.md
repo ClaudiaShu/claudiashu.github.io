@@ -11,7 +11,7 @@ I am now a third year Ph.D. student based at the [Centre for Artificial Intellig
 
 😊😊😊 If you have a question or desire to cooperate, just send an email to me.
 
-<span style="color: red;">📢 I am also actively looking for industry (research) internship. Please reach out if you have any openings that I might be a fit for.</span>
+<!-- <span style="color: red;">📢 I am also actively looking for industry (research) internship. Please reach out if you have any openings that I might be a fit for.</span> -->
 
 
 **may u needs ✨**
