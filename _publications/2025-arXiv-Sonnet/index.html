@@ -1,0 +1,80 @@
+---
+layout: page
+title: "Sonnet: Spectral Operator Neural Network for Multivariable Time Series Forecasting"
+date: 2025-05-22
+permalink: /publications/2025-arXiv-Sonnet/
+venue: "arXiv"
+year: 2025
+paper_url: "https://arxiv.org/abs/2505.15312"
+code_url: "https://github.com/ClaudiaShu/Sonnet"
+abbrev: "Sonnet"
+description: ""
+---
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+
+
+<title>Shu: Sonnet</title>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
+
+</head>
+
+<body>
+
+<div id="primarycontent">
+<center><h3><a class=link href="https://claudiashu.github.io/">Yuxuan Shu</a>&nbsp;&nbsp;&nbsp;<a class=link href="https://lampos.net/home">Vasileios Lampos</a></h3></center>
+
+<center><h4><strong>{{ page.venue }} {{ page.year }}</strong></h4></center>
+	
+<center><h4><strong><a href="{{ page.code_url }}"> Code </a>&nbsp;&nbsp;&nbsp;<a href="{{ page.paper_url }}"> Paper </a></strong></h4></center> 
+
+<!--Abstract-->
+<div class="container" style="padding-top: 20px;">
+<h2><strong>Abstract</strong></h2>
+<p style='text-align: justify; '>
+  Multivariable time series forecasting methods can integrate information from exogenous variables, leading to significant prediction accuracy gains. Transformer architecture has been widely applied in various time series forecasting models due to its ability to capture long-range sequential dependencies. However, a naïve application of transformers often struggles to effectively model complex relationships among variables over time. To mitigate against this, we propose a novel architecture, namely the Spectral Operator Neural Network (Sonnet). Sonnet applies learnable wavelet transformations to the input and incorporates spectral analysis using the Koopman operator. Its predictive skill relies on the Multivariable Coherence Attention (MVCA), an operation that leverages spectral coherence to model variable dependencies. Our empirical analysis shows that Sonnet yields the best performance on 34 out of 47 forecasting tasks with an average mean absolute error (MAE) reduction of 1.1% against the most competitive baseline (different per task). We further show that MVCA---when put in place of the naïve attention used in various deep learning models---can remedy its deficiencies, reducing MAE by 10.7% on average in the most challenging forecasting tasks.
+</div>
+	
+	
+<!--Datasets-->
+<div class="container" style="padding-top: 20px;">
+  <h2><strong>Datasets</strong></h2>
+  We evaluate our method on 12 real-world datasets, covering electricity, energy, weather, and influenza forecasting. These include standard benchmarks, datasets from the Darts library, weather data across five global cities, and flu trends in three regions.
+    
+  The weather data sets formed by us is accessible through in our <a href="https://github.com/ClaudiaShu/Sonnet">GitHub repository</a>.
+   
+  </div>
+
+<!-- citation -->
+<div class="container" style="padding-top: 20px;">
+  <h2 id="citation" style="padding-top: 80px; margin-top: -80px;"><strong>Citation</strong></h2><hr>
+  <pre style="padding: 1.0rem; margin-right: 0; margin-left: 0; font-size:12px">
+    {% raw %}
+    @article{shu2025sonnet,
+      author    = {Yuxuan Shu and Vasileios Lampos},
+      title     = {{Sonnet: Spectral Operator Neural Network for Multivariable Time Series Forecasting}},
+      journal   = {arXiv preprint arXiv:2505.15312},
+      year      = {2025}
+  }
+    {% endraw %}
+</pre>
+
+</div>
+	
+
+<!-- Footer -->
+<div class="container" style="padding-top: 50px;">
+    <center>
+      <footer>
+        <p>© Yuxuan Shu {{ page.year }}</p>
+      </footer>
+    </center>
+</div>
+
+
+</body></html>
