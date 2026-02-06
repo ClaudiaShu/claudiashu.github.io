@@ -47,6 +47,23 @@ description: ""
 <p style='text-align: justify; '>
   Multivariable time series forecasting methods can integrate information from exogenous variables, leading to significant prediction accuracy gains. Transformer architecture has been widely applied in various time series forecasting models due to its ability to capture long-range sequential dependencies. However, a naïve application of transformers often struggles to effectively model complex relationships among variables over time. To mitigate against this, we propose a novel architecture, namely the Spectral Operator Neural Network (Sonnet). Sonnet applies learnable wavelet transformations to the input and incorporates spectral analysis using the Koopman operator. Its predictive skill relies on the Multivariable Coherence Attention (MVCA), an operation that leverages spectral coherence to model variable dependencies. Our empirical analysis shows that Sonnet yields the best performance on 34 out of 47 forecasting tasks with an average mean absolute error (MAE) reduction of 1.1% against the most competitive baseline (different per task). We further show that MVCA---when put in place of the naïve attention used in various deep learning models---can remedy its deficiencies, reducing MAE by 10.7% on average in the most challenging forecasting tasks.
 </div>
+
+
+<!--Videos-->
+<div class="container" style="padding-top: 20px;">
+  <div class="row" style="display: flex; justify-content: center; align-items: flex-start; text-align: center; padding-top: 5px; padding-bottom: 5px; gap: 30px;">
+    <div style="display: inline-block;">
+      <h2><strong>Video</strong></h2>
+      <video style="width: 500px" controls>
+        <source src="misc/AAAI26_main-19679.mp4" type=video/mp4>
+      </video>
+    </div>
+    <div style="display: inline-block;">
+      <h2><strong>Poster</strong></h2>
+      <a href="misc/AAAI26_main-19679.pdf"><img src="misc/AAAI26_main-19679.png" alt='poster' style="width: 250px"></img></a>
+    </div>
+  </div>
+</div>
 	
 	
 <!--Datasets-->
