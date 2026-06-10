@@ -5,6 +5,7 @@ permalink: /resume/
 comments: false
 ---
 
+📄 [Download Academic CV](/assets/cv/Academic_CV.pdf)
 
 * B.S. in Remote Sensing Science and Technology, Wuhan University, 2017-2021
 * M.S. in Medical Robotics and Image Guided Intervention, Imperial College London, 2021-2022
