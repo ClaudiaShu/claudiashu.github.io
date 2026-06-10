@@ -215,16 +215,16 @@
   }
 
   .author-social {
-    margin-top: 1.5rem;
+    margin-top: 2rem;
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 25px;
     flex-wrap: wrap;
 
     a {
       text-decoration: none;
       color: $black;
-      opacity: 0.7;
+      opacity: 0.65;
       transition: opacity 0.2s ease;
       display: inline-flex;
       align-items: center;
@@ -235,14 +235,15 @@
       }
 
       i {
-        font-size: 1.3em;
+        font-size: 1.4em;
       }
     }
 
     .social-cv-badge {
       font-weight: 600;
-      font-size: 0.9em;
-      opacity: 0.7;
+      font-size: 0.95em;
+      opacity: 0.65;
+      letter-spacing: 0.5px;
 
       &:hover {
         opacity: 1;
@@ -434,15 +435,32 @@
 
 .footer-icons {
   display: flex;
-  justify-content: center; /* Center the icons horizontally */
-  gap: 20px; /* Adjust the gap between icons */
+  justify-content: center;
+  gap: 25px;
+  align-items: center;
+
+  a {
+    text-decoration: none;
+    color: $black;
+    opacity: 0.65;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    i {
+      font-size: 1.1em;
+    }
+  }
 
   .footer-cv-badge {
     font-weight: 600;
-    font-size: 0.9em;
-    opacity: 0.7;
+    font-size: 0.95em;
+    opacity: 0.65;
     text-decoration: none;
     color: $black;
+    letter-spacing: 0.5px;
 
     &:hover {
       opacity: 1;
