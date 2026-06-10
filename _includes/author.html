@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 <div class="author">
   <img
     class="author-avatar"
@@ -6,4 +8,23 @@
   />
   <h2 class="author-name">{{ site.author.name }}</h2>
   <p class="author-bio">{{ site.author.bio }}</p>
+
+  <div class="author-social">
+    <a href="/resume" class="social-cv-badge" aria-label="CV">CV</a>
+    <a href="https://github.com/{{ site.author.github }}" target="_blank" aria-label="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="{{ site.author.linkedin }}" target="_blank" aria-label="LinkedIn">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="{{ site.author.scholar }}" target="_blank" aria-label="Google Scholar">
+      <i class="fas fa-graduation-cap"></i>
+    </a>
+    <a href="https://twitter.com/{{ site.author.twitter }}" target="_blank" aria-label="Twitter">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a href="mailto:{{ site.author.email }}" aria-label="Email">
+      <i class="fas fa-envelope"></i>
+    </a>
+  </div>
 </div>

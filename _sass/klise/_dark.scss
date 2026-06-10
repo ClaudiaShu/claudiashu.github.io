@@ -249,6 +249,13 @@ body[data-theme="dark"] {
     background-color: $dark-light;
   }
 
+  // Author Social
+  .author-social {
+    a {
+      color: $dark-white;
+    }
+  }
+
   // Footer
   .footer {
     span.footer_item {
@@ -256,6 +263,14 @@ body[data-theme="dark"] {
     }
     a.footer_item:not(:last-child) {
       color: $dark-white;
+    }
+    .footer-icons {
+      a {
+        color: $dark-white;
+      }
+      .footer-cv-badge {
+        color: $dark-white;
+      }
     }
     .footer_copyright {
       color: $dark-gray;
